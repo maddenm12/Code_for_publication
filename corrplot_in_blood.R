@@ -60,12 +60,3 @@ data3=data2[,top3]
 correlation_data2=cor(data3,method="pearson")
 corrplot(correlation_data2)
 
-data4=as.data.frame(data3)
-plot(data4$'hsa-miR-144-5p',data4$'hsa.miR-331-3p')
-
-
-sig_miRs_deseq
-setwd("C:/Users/mmoor/OneDrive/Desktop/GDC_Data/luad_mirnaseq/Blood_Results")
-sig_miRs_ttest=read.table("15_to_20_t-test_miRs.txt",header=T,stringsAsFactors=F)[,1]
-setdiff(sig_miRs_ttest,sig_miRs_deseq)
-intersect(sig_miRs_ttest,sig_miRs_deseq)
